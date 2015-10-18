@@ -4,7 +4,7 @@
   "authors": [ "Tommy Parnell" ],
   "tags": [ "TurboLinks Middlewear" ],
   "projectUrl": "https://github.com/tparnell8/TurboLinks.Net",
-  "licenseUrl": "MIT",
+  "licenseUrl": "https://opensource.org/licenses/MIT",
   "dependencies": {
   },
   "frameworks": {
