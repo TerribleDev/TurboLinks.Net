@@ -1,3 +1,5 @@
+configuration: Release
+version: 0.1.{build}
 nuget:
   account_feed: true
   
