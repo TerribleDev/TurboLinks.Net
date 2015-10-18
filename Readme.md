@@ -1,9 +1,10 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/ns9koh6l7l1nuv57?svg=true)](https://ci.appveyor.com/project/tparnell8/turbolinks-net)
+
 Add [turbolink](https://github.com/rails/turbolinks) support to ASP.NET 5 applications 
 
 This provides middlewear to add support for turbolinks. 
 
-Simply add `app.UseTurboLinks();` and a build of the JavaScript turbolinks file to your layout.cshtml file (one can be found in the wwwroot/js dir of the example project)
-
+Simply install the [nuget package](https://www.nuget.org/packages/TurboLinks.Net/) (`TurboLinks.Net`) add `app.UseTurboLinks();`to Startup.cs and a build of the JavaScript turbolinks file to your layout.cshtml file (one can be found in the wwwroot/js dir of the example project). Consider adding turbolinks after your static files module
 
 ## Why use turbolinks?
 
