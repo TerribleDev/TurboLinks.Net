@@ -1,10 +1,10 @@
 ﻿{
-  "version": "1.0.0-*",
+  "version": "1.0.0",
   "description": "TurboLinks.Net Class Library",
   "authors": [ "Tommy Parnell" ],
-  "tags": [ "" ],
-  "projectUrl": "",
-  "licenseUrl": "",
+  "tags": [ "TurboLinks Middlewear" ],
+  "projectUrl": "https://github.com/tparnell8/TurboLinks.Net",
+  "licenseUrl": "MIT",
   "dependencies": {
   },
   "frameworks": {

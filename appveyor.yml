@@ -2,6 +2,7 @@ configuration: Release
 version: 0.1.{build}
 nuget:
   account_feed: true
+  project_feed: true
   
 init:
   - git config --global core.autocrlf true
