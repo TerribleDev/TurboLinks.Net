@@ -2,7 +2,7 @@ Add [turbolink](https://github.com/rails/turbolinks) support to ASP.NET 5 applic
 
 This provides middlewear to add support for turbolinks. 
 
-Simply add `app.UseTurboLinks();` and a build of the JavaScript turbolinks file (one can be found in the wwwroot/js dir of the example project)
+Simply add `app.UseTurboLinks();` and a build of the JavaScript turbolinks file to your layout.cshtml file (one can be found in the wwwroot/js dir of the example project)
 
 
 ## Why use turbolinks?
