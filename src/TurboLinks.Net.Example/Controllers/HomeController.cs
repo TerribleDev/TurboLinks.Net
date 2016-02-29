@@ -13,9 +13,11 @@ namespace TurboLinks.Net.Example.Controllers
             return View();
         }
 
-        public void About()
+        public IActionResult About()
         {
-            Response.Redirect("http://about.tommyparnell.com");
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
         }
 
         public IActionResult Contact()
@@ -27,7 +29,7 @@ namespace TurboLinks.Net.Example.Controllers
 
         public IActionResult Error()
         {
-            return View("~/Views/Shared/Error.cshtml");
+            return View();
         }
     }
 }
