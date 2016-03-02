@@ -8,7 +8,7 @@ Simply install the [nuget package](https://www.nuget.org/packages/TurboLinks.Net
 
 ## Why use turbolinks?
 
-If you have an application that may not fit into an SPA, or just have a lot of code that is tied to .NET this provides SPA like speed by ajaxing the html and replacing it. This allows the browser to keep the cache of existing scripts. Turbolinks was made in the rails community, and a lot of existing documentation already exists.
+If you have an application that may not fit into an SPA, or just have a lot of code that is tied to .NET this provides SPA like speed by ajaxing the html and replacing the body with the results. This allows the browser to keep the cache of existing scripts. Turbolinks was made in the rails community, and a lot of existing documentation already exists.
 
 
 **Warning** This stops page loads thus `$(document).ready(function(){})` does not fire on new pages.
