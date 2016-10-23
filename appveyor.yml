@@ -8,15 +8,10 @@ init:
   - git config --global core.autocrlf true
   
 before_build:
- - ps: "&{$Branch='dev';iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1'))}"
- - ps: dnvm upgrade
- - ps: dnvm update-self
- - ps: dnvm install 1.0.0-rc1-final
- - ps: dnvm list
- - ps: dnvm use 1.0.0-rc1-final
- - ps: npm cache clean
- - ps: dnu restore
- - cmd: set PATH=C:\Program Files (x86)\MSBuild\14.0\Bin;%PATH%
+- ps: >-
+    (new-object net.webclient).DownloadFile('https://go.microsoft.com/fwlink/?LinkID=827524','core.exe')
+    core.exe /install /quiet /norestart
+    dotnet restore
 
 artifacts:
  - path: artifacts\bin\TurboLinks.Net\Release\*.nupkg
