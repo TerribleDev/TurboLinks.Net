@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
-namespace TurboLinks.Net.Example.Controllers
+namespace TurboLinksExample.Controllers
 {
     public class HomeController : Controller
     {
