@@ -13,8 +13,8 @@ before_build:
 - ps: dotnet restore
 
 build_script:
-- ps: dotnet build .\src\TuboLinks.Net
-- ps: dotnet build .\src\TuboLinksExample
+- ps: dotnet build .\src\TurboLinks.Net
+- ps: dotnet build .\src\TurboLinksExample
 
 artifacts:
  - path: artifacts\bin\TurboLinks.Net\Release\*.nupkg
