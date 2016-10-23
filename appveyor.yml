@@ -8,10 +8,9 @@ init:
   - git config --global core.autocrlf true
   
 before_build:
-- ps: >-
-    invoke-webrequest https://go.microsoft.com/fwlink/?LinkID=827524 -OutFile core.exe
-    core.exe /install /quiet /norestart
-    dotnet restore
+- ps: invoke-webrequest https://go.microsoft.com/fwlink/?LinkID=827524 -OutFile core.exe
+- ps: .\core.exe /install /quiet /norestart
+- ps: dotnet restore
 
 artifacts:
  - path: artifacts\bin\TurboLinks.Net\Release\*.nupkg
