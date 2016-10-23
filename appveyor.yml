@@ -9,7 +9,7 @@ init:
   
 before_build:
 - ps: >-
-    (new-object net.webclient).DownloadFile('https://go.microsoft.com/fwlink/?LinkID=827524','core.exe')
+    invoke-webrequest https://go.microsoft.com/fwlink/?LinkID=827524 -OutFile core.exe
     core.exe /install /quiet /norestart
     dotnet restore
 
