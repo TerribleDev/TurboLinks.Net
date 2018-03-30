@@ -4,7 +4,7 @@
     <Description>Add support for Turbolinks</Description>
     <VersionPrefix>1.1.1</VersionPrefix>
     <Authors>Tommy Parnell</Authors>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>TurboLinks.Net</AssemblyName>
     <PackageId>TurboLinks.Net</PackageId>
     <PackageTags>TurboLinks Middlewear</PackageTags>
