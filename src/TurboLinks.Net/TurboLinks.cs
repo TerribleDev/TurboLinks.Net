@@ -45,9 +45,6 @@ namespace TurboLinks.Net
 
     public static class BuilderExtension
     {
-        public static IApplicationBuilder UseTurboLinks(this IApplicationBuilder app)
-        {
-            return app.UseMiddleware<TurboLinks>();
-        }
+        public static IApplicationBuilder UseTurboLinks(this IApplicationBuilder app) => app.UseMiddleware<TurboLinks>();
     }
 }
