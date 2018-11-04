@@ -1,18 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D0D99B75-30C7-485A-B978-3008D6908B7B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{40D6294D-197C-47C9-9C4F-26C0BAEF2A80}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TurboLinks.Net", "src\TurboLinks.Net\TurboLinks.Net.xproj", "{54979581-020C-4F8B-99B0-36C28FFBBADE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurboLinks.Net", "src\TurboLinks.Net\TurboLinks.Net.csproj", "{54979581-020C-4F8B-99B0-36C28FFBBADE}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TurboLinksExample", "src\TurboLinksExample\TurboLinksExample.xproj", "{16DC6FE0-A511-45E0-BD49-28933EAD8A98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TurboLinksExample", "src\TurboLinksExample\TurboLinksExample.csproj", "{16DC6FE0-A511-45E0-BD49-28933EAD8A98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,5 +32,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{54979581-020C-4F8B-99B0-36C28FFBBADE} = {D0D99B75-30C7-485A-B978-3008D6908B7B}
 		{16DC6FE0-A511-45E0-BD49-28933EAD8A98} = {D0D99B75-30C7-485A-B978-3008D6908B7B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBAAEACA-BCBF-4EE8-BECF-BA22FAE2BFC7}
 	EndGlobalSection
 EndGlobal

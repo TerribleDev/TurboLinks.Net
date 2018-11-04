@@ -1,6 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/ns9koh6l7l1nuv57?svg=true)](https://ci.appveyor.com/project/tparnell8/turbolinks-net)
 
-Add [turbolink](https://github.com/rails/turbolinks) support to ~~ASP.NET 5~~ ASP.NET Core 1.0 applications 
+Add [turbolink](https://github.com/rails/turbolinks) ASP.NET core 2.1 applications
 
 This provides middlewear to add support for turbolinks. 
 
@@ -12,7 +12,3 @@ If you have an application that may not fit into an SPA, or just have a lot of c
 
 
 **Warning** This stops page loads thus `$(document).ready(function(){})` does not fire on new pages.
-
-## What about asp.net 4x?
-
-I am going to back port this to owin, and eventually more classic version of ASP.NET In the mean time, you can find an MVC action filter [here](https://github.com/kazimanzurrashid/aspnetmvcturbolinks)

@@ -24,13 +24,13 @@ namespace TurboLinks.Net
             var request = context.Request;
             var response = context.Response;
 
-            if(!string.IsNullOrWhiteSpace(request.Headers["X-XHR-Referer"]))
+            if (!string.IsNullOrWhiteSpace(request.Headers["X-XHR-Referer"]))
             {
                 context.Response.Cookies.Append("request_method", request.Method, new CookieOptions { HttpOnly = false });
-                if(context.Response.StatusCode == 301 || context.Response.StatusCode == 302)
+                if (context.Response.StatusCode == 301 || context.Response.StatusCode == 302)
                 {
                     var uri = new Uri(response.Headers["Location"]);
-                    if(uri.Host.Equals(request.Host.Value))
+                    if (uri.Host.Equals(request.Host.Value))
                     {
                         response.Headers["X-XHR-Redirected-To"] = response.Headers["Location"];
                     }
@@ -45,9 +45,7 @@ namespace TurboLinks.Net
 
     public static class BuilderExtension
     {
-        public static void UseTurboLinks(this IApplicationBuilder app)
-        {
-            app.UseMiddleware<TurboLinks>();
-        }
+        public static IApplicationBuilder UseTurboLinks(this IApplicationBuilder app) => app.UseMiddleware<TurboLinks>();
+
     }
 }
