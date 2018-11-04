@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Add support for Turbolinks</Description>
     <Authors>Tommy Parnell</Authors>
-    <TargetFramework>netstandard1.6</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>TurboLinks.Net</AssemblyName>
     <PackageId>TurboLinks.Net</PackageId>
     <PackageTags>TurboLinks Middlewear</PackageTags>
@@ -12,8 +12,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.1.1" />
   </ItemGroup>
 
 </Project>
