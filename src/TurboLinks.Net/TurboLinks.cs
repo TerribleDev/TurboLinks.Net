@@ -8,7 +8,7 @@ namespace TurboLinks.Net
 {
     public class TurboLinks
     {
-        private RequestDelegate _next;
+        readonly private RequestDelegate _next;
 
         public TurboLinks(RequestDelegate next)
         {
@@ -17,35 +17,26 @@ namespace TurboLinks.Net
 
         public async Task Invoke(HttpContext context)
         {
-            var memoryStream = new MemoryStream();
-            var bodyStream = context.Response.Body;
-            context.Response.Body = memoryStream;
-            await _next?.Invoke(context);
-            var request = context.Request;
-            var response = context.Response;
-
-            if (!string.IsNullOrWhiteSpace(request.Headers["X-XHR-Referer"]))
+            //Adding Turbolinks header to fix redirect issues in Turbolinks.
+            if ((context.Response.StatusCode == 302) || (context.Response.StatusCode == 301))
             {
-                context.Response.Cookies.Append("request_method", request.Method, new CookieOptions { HttpOnly = false });
-                if (context.Response.StatusCode == 301 || context.Response.StatusCode == 302)
+                context.Response.OnStarting(state =>
                 {
-                    var uri = new Uri(response.Headers["Location"]);
-                    if (uri.Host.Equals(request.Host.Value))
+                    var httpContext = (HttpContext)state;
+                    if (!httpContext.Response.Headers.ContainsKey("Turbolinks-Location"))
                     {
-                        response.Headers["X-XHR-Redirected-To"] = response.Headers["Location"];
+                        httpContext.Response.Headers.Add("Turbolinks-Location", new[] { httpContext.Response.Headers["Location"].ToString() });
                     }
-                }
+                    return Task.FromResult(0);
+                }, context);
             }
-            memoryStream.WriteTo(bodyStream);
-            await bodyStream.FlushAsync();
-            memoryStream.Dispose();
-            bodyStream.Dispose();
+            await _next(context);
         }
     }
 
     public static class BuilderExtension
     {
         public static IApplicationBuilder UseTurboLinks(this IApplicationBuilder app) => app.UseMiddleware<TurboLinks>();
-
     }
+
 }
